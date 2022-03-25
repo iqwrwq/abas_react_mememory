@@ -7,24 +7,59 @@ import memoryCard5 from '../public/memoryCards/memoryCard-5.png'
 import memoryCard6 from '../public/memoryCards/memoryCard-6.png'
 import memoryCard7 from '../public/memoryCards/memoryCard-7.png'
 import memoryCard8 from '../public/memoryCards/memoryCard-8.png'
-import memoryCard9 from '../public/memoryCards/memoryCard-9.png'
+import memoryCardCover from '../public/memoryCards/memoryCard-cover.png'
+
+import ReactCardFlip from "react-card-flip";
+import {useState} from "react";
 
 export default function Home() {
+    const memoryCards = [
+        memoryCard1, memoryCard1,
+        memoryCard1, memoryCard1,
+        memoryCard1, memoryCard1,
+        memoryCard1, memoryCard1,
+        memoryCard1, memoryCard1,
+        memoryCard1, memoryCard1,
+        memoryCard1, memoryCard1,
+        memoryCard1, memoryCard1
+    ]
+
+    const shuffleArray = (array) => {
+        let currentIndex = array.length, randomIndex;
+
+        while (currentIndex != 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+
+            [array[currentIndex], array[randomIndex]] = [
+                array[randomIndex], array[currentIndex]];
+        }
+
+        return array;
+    }
+    const [shuffle, doShuffle] = useState(shuffleArray(memoryCards))
+
+    const [flip, setFlip] = useState(false);
+    const handleClick = (e) => {
+        e.preventDefault();
+        setFlip(!flip);
+    }
+
+
     return (
         <div>
             <div className="scoreboard">
                 <div className="score"></div>
             </div>
-            <div className="game">
-                <Image className='memoryCard' src={memoryCard1} alt="mem1"/>
-                <Image className='memoryCard' src={memoryCard2} alt="mem2"/>
-                <Image className='memoryCard' src={memoryCard3} alt="mem3"/>
-                <Image className='memoryCard' src={memoryCard4} alt="mem4"/>
-                <Image className='memoryCard' src={memoryCard5} alt="mem5"/>
-                <Image className='memoryCard' src={memoryCard6} alt="mem6"/>
-                <Image className='memoryCard' src={memoryCard7} alt="mem7"/>
-                <Image className='memoryCard' src={memoryCard8} alt="mem8"/>
-                <Image className='memoryCard' src={memoryCard9} alt="mem9"/>
+            <div className='game'>
+                {memoryCards.map((card, index) => (
+                    <div onClick={handleClick} key={index}>
+                        <ReactCardFlip isFlipped={flip} >
+                            <Image src={memoryCardCover} key='front'/>
+                            <Image src={card} key='back'/>
+                        </ReactCardFlip>
+                    </div>
+                ))}
             </div>
         </div>
     )
