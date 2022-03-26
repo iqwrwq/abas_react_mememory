@@ -8,7 +8,7 @@ import memoryCard7 from '../public/memoryCards/memoryCard-7.png'
 import memoryCard8 from '../public/memoryCards/memoryCard-8.png'
 
 import {useState} from "react";
-import FlipCard from "./api/FlipCard";
+import FlipCard from "../components/FlipCard";
 
 export default function Home() {
     const data = [
