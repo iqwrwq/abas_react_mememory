@@ -7,7 +7,7 @@ import memoryCard6 from '../public/memoryCards/memoryCard-6.png'
 import memoryCard7 from '../public/memoryCards/memoryCard-7.png'
 import memoryCard8 from '../public/memoryCards/memoryCard-8.png'
 
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import FlipCard from "./api/FlipCard";
 
 export default function Home() {
