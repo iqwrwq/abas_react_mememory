@@ -16,7 +16,7 @@ export default function FlipCard(props) {
     useEffect(() => {
         setTimeout(() => {
             setFlip(false);
-        }, 2000)
+        }, Math.floor(Math.random() * (2000 - 1600 + 1)) + 1600)
     }, [])
 
     return (
