@@ -1,14 +1,15 @@
-import memoryCard1 from '../public/memoryCards/memoryCard-1.png'
-import memoryCard2 from '../public/memoryCards/memoryCard-2.png'
-import memoryCard3 from '../public/memoryCards/memoryCard-3.png'
-import memoryCard4 from '../public/memoryCards/memoryCard-4.png'
-import memoryCard5 from '../public/memoryCards/memoryCard-5.png'
-import memoryCard6 from '../public/memoryCards/memoryCard-6.png'
-import memoryCard7 from '../public/memoryCards/memoryCard-7.png'
-import memoryCard8 from '../public/memoryCards/memoryCard-8.png'
+import memoryCard1 from "../public/memoryCards/memoryCard-1.png";
+import memoryCard2 from "../public/memoryCards/memoryCard-2.png";
+import memoryCard3 from "../public/memoryCards/memoryCard-3.png";
+import memoryCard4 from "../public/memoryCards/memoryCard-4.png";
+import memoryCard5 from "../public/memoryCards/memoryCard-5.png";
+import memoryCard6 from "../public/memoryCards/memoryCard-6.png";
+import memoryCard7 from "../public/memoryCards/memoryCard-7.png";
+import memoryCard8 from "../public/memoryCards/memoryCard-8.png";
 
 import {useState} from "react";
 import FlipCard from "../components/FlipCard";
+import WinScreen from "../components/WinScreen";
 
 export default function Home() {
     // Memory Karten als Array
@@ -21,7 +22,7 @@ export default function Home() {
         {index: 5, id: 6, image: memoryCard6, pop: false}, {index: 13, id: 6, image: memoryCard6, pop: false},
         {index: 6, id: 7, image: memoryCard7, pop: false}, {index: 14, id: 7, image: memoryCard7, pop: false},
         {index: 7, id: 8, image: memoryCard8, pop: false}, {index: 15, id: 8, image: memoryCard8, pop: false}
-    ];
+    ]
 
     // Eine Variable für den Punktestand
     const [score, setScore] = useState(0);
@@ -112,7 +113,7 @@ export default function Home() {
             </div>
             {/* Das Spielbrett */}
             {matchIsOver ?
-                <button className='btn center' onClick={resetGame}>reset</button> :
+                <WinScreen reset={resetGame} /> :
                 <div className='center game'>
                     {memoryCards.map((card, index) => (
                         <FlipCard key={index} handleClick={handleClick} card={card}/>
