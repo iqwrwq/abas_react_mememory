@@ -101,7 +101,7 @@ export default function Home() {
 
     // Das Spiel neu laden
     const resetGame = () => {
-        window.location.reload(false);
+        window.location.reload();
     }
 
     return (
