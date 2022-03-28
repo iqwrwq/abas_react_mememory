@@ -109,7 +109,10 @@ export default function Home() {
             {/* Der Spielscore */}
             <div className="scoreboard">
                 <div className="score">{score}</div>
-                <button className='btn' onClick={resetGame}>reset</button>
+                {matchIsOver ?
+                    null :
+                    <button className='btn' onClick={resetGame}>reset</button>
+                }
             </div>
             {/* Das Spielbrett */}
             {matchIsOver ?
