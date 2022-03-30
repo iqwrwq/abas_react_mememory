@@ -6,14 +6,50 @@ import memoryCard5 from "../public/memoryCards/memoryCard-5.png";
 import memoryCard6 from "../public/memoryCards/memoryCard-6.png";
 import memoryCard7 from "../public/memoryCards/memoryCard-7.png";
 import memoryCard8 from "../public/memoryCards/memoryCard-8.png";
+import memoryCard9 from "../public/memoryCards/memoryCard-9.png";
+import memoryCard10 from "../public/memoryCards/memoryCard-10.png";
+import memoryCard11 from "../public/memoryCards/memoryCard-11.png";
+import memoryCard12 from "../public/memoryCards/memoryCard-12.png";
+import memoryCard13 from "../public/memoryCards/memoryCard-13.png";
+import memoryCard14 from "../public/memoryCards/memoryCard-14.png";
+import memoryCard15 from "../public/memoryCards/memoryCard-15.png";
+import memoryCard16 from "../public/memoryCards/memoryCard-16.png";
+import memoryCard17 from "../public/memoryCards/memoryCard-17.png";
+import memoryCard18 from "../public/memoryCards/memoryCard-18.png";
+import memoryCard19 from "../public/memoryCards/memoryCard-19.png";
+import memoryCard20 from "../public/memoryCards/memoryCard-20.png";
+import memoryCard21 from "../public/memoryCards/memoryCard-21.png";
+import memoryCard22 from "../public/memoryCards/memoryCard-22.png";
+import memoryCard23 from "../public/memoryCards/memoryCard-23.png";
+import memoryCard24 from "../public/memoryCards/memoryCard-24.png";
+import memoryCard25 from "../public/memoryCards/memoryCard-25.png";
+import memoryCard26 from "../public/memoryCards/memoryCard-26.png";
+import memoryCard27 from "../public/memoryCards/memoryCard-27.png";
+import memoryCard28 from "../public/memoryCards/memoryCard-28.png";
+import memoryCard29 from "../public/memoryCards/memoryCard-29.png";
+import memoryCard30 from "../public/memoryCards/memoryCard-30.png";
+import memoryCard31 from "../public/memoryCards/memoryCard-31.png";
+import memoryCard32 from "../public/memoryCards/memoryCard-32.png";
+import memoryCard33 from "../public/memoryCards/memoryCard-33.png";
+import memoryCard34 from "../public/memoryCards/memoryCard-34.png";
+import memoryCard35 from "../public/memoryCards/memoryCard-35.png";
+import memoryCard36 from "../public/memoryCards/memoryCard-36.png";
+import memoryCard37 from "../public/memoryCards/memoryCard-37.png";
 
 import {useState} from "react";
-import FlipCard from "../../abas-nextjs-react-demo/component/FlipCard";
+import FlipCard from "../components/FlipCard";
 import WinScreen from "../components/WinScreen";
 
 export default function Home() {
     const availableCards = [
-
+        memoryCard1,memoryCard2,memoryCard3,memoryCard4,memoryCard5,
+        memoryCard6,memoryCard7,memoryCard8,memoryCard9,memoryCard10,
+        memoryCard11,memoryCard12,memoryCard13,memoryCard14,memoryCard15,
+        memoryCard16,memoryCard17,memoryCard18,memoryCard19,memoryCard20,
+        memoryCard21,memoryCard22,memoryCard23,memoryCard24,memoryCard25,
+        memoryCard26,memoryCard27,memoryCard28,memoryCard29,memoryCard30,
+        memoryCard31,memoryCard32,memoryCard33,memoryCard34,memoryCard35,
+        memoryCard36,memoryCard37,
     ]
 
     const data = [
