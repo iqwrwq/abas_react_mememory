@@ -6,17 +6,14 @@ import {useEffect, useState} from "react";
 
 
 export default function FlipCard(props) {
-    // Eine Variable für den Flip effekt
     const [flip, setFlip] = useState(true);
 
-    // Eine Methode für den flip, ruft zusätzlich im Parent eine Methode auf
     const doFlip = (e) => {
         setFlip(true);
         e.preventDefault();
         props.handleClick(props.card, setFlip);
     }
 
-    // Eine initiale zurücksetzung auf flip(false)
     useEffect(() => {
         setTimeout(() => {
             setFlip(false);
