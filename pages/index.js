@@ -17,7 +17,7 @@ export default function Home() {
     function createMemoryCardData() {
         const data = [];
         for (let i = 0; i <= 7; i++) {
-            const random = Math.floor(Math.random() * ((memoryData.length - i) + 1));
+            const random = Math.floor(Math.random() * (((memoryData.length - 1) - i) + 1));
             const card = memoryData.splice(random, 1)[0].default;
             data.push({index: i, id: (i + 1), image: card, pop: false});
             data.push({index: (i + 8), id: (i + 1), image: card, pop: false});
@@ -80,7 +80,9 @@ export default function Home() {
                 <div className="score">{score}</div>
                 {matchIsOver ?
                     null :
-                    <button className='btn' onClick={resetGame}>reset</button>
+                    <div className='header-links'>
+                        <button className='btn' onClick={resetGame}>reset</button>
+                    </div>
                 }
             </div>
             {matchIsOver ?
